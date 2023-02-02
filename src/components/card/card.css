@@ -1,7 +1,7 @@
 .card {
     box-sizing: border-box;
 
-    position: relative;
+    position: initial;
 
     border: 1px solid #FFFFFF;
     border-radius: 22px;
@@ -11,7 +11,7 @@
     min-width: 164px;
     min-height: 164px;
 
-    display: inline-block;
+    display: inline-table;
     margin: 16px;
 }
 
@@ -42,7 +42,7 @@
 .card-title-icon {
     color: rgba(235, 235, 245, 0.54);
     filter: opacity(54%);
-    height: 16px;
-    width: 16px;
+    height: 20px;
+    width: 22px;
     padding-right: 6px;
 }

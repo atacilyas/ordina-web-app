@@ -7,24 +7,16 @@ type CardProps = {
     icon?: string,
 }
 
-type CardState = {
-    counter: number,
-}
-
-export class Card extends React.Component<CardProps,CardState> {
-    state: CardState = {
-        counter: 0,
-    };
-
+export class Card extends React.Component<CardProps> {
     render() {
       return <div className="card">
             <h1 className='card-title'>
                 <img src={this.props.icon} className="card-title-icon" alt="icon"/>
                 {this.props.title}
             </h1>
-            <body>
+            <div>
                 {this.props.children}
-            </body>
+            </div>
         </div>;
     }
 }
