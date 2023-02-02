@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  background: radial-gradient(95.47% 71.89% at 93.07% 74.31%, #45278B 0%, #2E335A 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background: radial-gradient(95.47% 71.89% at 93.07% 74.31%, #45278B 0%, #2E335A 100%);
   color: white;
 }
 

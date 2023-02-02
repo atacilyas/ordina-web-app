@@ -2,16 +2,19 @@ import "./home.css"
 import React from 'react';
 
 import { Card } from "../../components/card/card";
-//import { WeatherService } from "../../services/weather-service";
+import { WeatherServiceTommorow } from "../../services/weather-service/weather-service-tommorow";
 import t from '../../i18n/i18n';
 import * as assets from '../../assets/assets.js';
-import { WeatherServiceMocked } from "../../services/weather-service/weather-service-mocked";
+//import { WeatherServiceMocked } from "../../services/weather-service/weather-service-mocked";
 import { WeatherData } from "../../services/weather-service/weather-data";
 import { WindDirection } from "../../components/wind-direction/wind-direction";
 
 async function loadAllData() {
   // TODO: (ilyas) either make WeatherService function static which i can not seem to do in an abstract class or make it a singleton
-  return (new WeatherServiceMocked()).getAllRecentWeather("amsterdam", true);
+  return (new WeatherServiceTommorow()).getAllRecentWeather("amsterdam", true);
+
+  // Use this line instead if you want to mock the data due to CORS ANYWHERE being called too often
+  //return (new WeatherServiceMocked()).getAllRecentWeather("amsterdam", true);
 }
 
 type HomePageState = {

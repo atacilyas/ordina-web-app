@@ -10,7 +10,7 @@ const resources = {
     nl: { translation: nl}
 }
 
-export const defaultLanguage = "nl";
+export const defaultLanguage = "en";
 
 i18n
     .use(LanguageDetector)

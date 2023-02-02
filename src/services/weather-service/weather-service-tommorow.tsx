@@ -10,7 +10,7 @@ export class WeatherServiceTommorow extends WeatherService {
             {
                 location: location, // "For example: amsterdam"
                 units: "metric",
-                apikey: "9Xug5lLfxCKGgCarSYplASPt4rJdYzjH" // TODO: (ilyas) hide this ith a secret
+                apikey: "9Xug5lLfxCKGgCarSYplASPt4rJdYzjH" // TODO: (ilyas) hide this as a secret
             }
         ).toString();
         
