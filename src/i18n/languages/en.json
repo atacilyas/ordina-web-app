@@ -3,5 +3,9 @@
     "precipitation-title-card" : "RAINFALL",
     "precipitation-duration" : "in last hour",
     "temperature-title-card" : "FEELS LIKE",
-    "wind-direction-title-card" : "WIND"
+    "wind-direction-title-card" : "WIND",
+    "north-short" : "N",
+    "east-short" : "E",
+    "south-short" : "S",
+    "west-short" : "W"
 }

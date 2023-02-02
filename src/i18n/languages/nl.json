@@ -3,5 +3,9 @@
     "precipitation-title-card" : "REGEN",
     "precipitation-duration" : "afgelopen uur",
     "temperature-title-card" : "TEMPERATUUR",
-    "wind-direction-title-card" : "WIND"
+    "wind-direction-title-card" : "WIND",
+    "north-short" : "N",
+    "east-short" : "O",
+    "south-short" : "Z",
+    "west-short" : "W"
 }
