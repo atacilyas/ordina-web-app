@@ -8,18 +8,21 @@ import mockData from "./response.json";
 // The mockdata is a response from https://api.tomorrow.io/v4/weather/history/recent?location=amsterdam
 
 export class WeatherServiceMocked extends WeatherService {
-    public getAllRecentWeather(location: string, enableCORS: boolean): WeatherData | null {
-        // TODO: (ilyas) make sure the data i get is the most recent one
-        let data = mockData.timelines.hourly.at(0)?.values;
-        if(data) {
-            return new WeatherData(
-                data.rainIntensity,
-                data.temperatureApparent,
-                data.windDirection,
-                data.windSpeed,
-            );
-        }
+    public getAllRecentWeather(location: string, enableCORS: boolean): Promise<WeatherData | null> {
+        // The last value is the most recent data
+        let data = mockData.timelines.hourly.at(-1)?.values;
 
-        return null;
+        return new Promise(function (myResolve, myReject) {
+            if (data) {
+                myResolve(new WeatherData(
+                    data.rainIntensity, // mm³/h but since this is for a 1 hour period you can just use mm
+                    data.temperatureApparent, // degrees celsius
+                    data.windDirection, // degrees with North being 0
+                    data.windSpeed, // m/s
+                ));
+            }
+            
+            myReject();
+        });
     }
 }
